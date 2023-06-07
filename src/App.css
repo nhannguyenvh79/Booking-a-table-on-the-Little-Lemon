@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* mobile first
+.AppGrid {
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: 100%;
+  
+
+  grid-template-areas:
+  "headNav"
+  "heroSection"
+  "specials"
+  "testinomial"
+  "resto"
+  "footer"
+}
+ */
+
+/* tablette */
+@media (min-width: 440px) {
+  .AppGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "headNav headNav headNav"
+    "heroSection heroSection heroSection"
+    "specials specials specials"
+    "testinomial testinomial testinomial"
+    "resto resto resto"
+    "footer footer footer"    
+  }
+}
+
+/* desktop */
+/* a tester
+@media (max-width: 700px) {
+  .grid-adjustable-columns {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 701px) {
+  .grid-adjustable-columns {
+    width: min(1000px,75rem);
+    margin: 0 auto;
+    grid-auto-flow: column;
+    gap: 1em;
+  }
+}
+*/
+
+/*
+NAVIGATION
+*/
+.nav{
+  text-align: right;
+}
+#menu{
+  display: inline;
+  
+}
+.nav-item{
+  margin:.5em  0;
+  padding:1em .5em;
+}
+
+/* HEADER */
+.headNav{
+  grid-area: headNav; 
+}
+
+/* Base  */
+ul{list-style: none;}
+li{margin: 0; padding: 0;}
+
+
+/* 
+LAYOUT 
+*/
+
+
+/* background section black */
+.backGround, .callactionCard{
+  background-color:  #495E57;
+  color: whitesmoke;
+}
+
+.yellowColor{
+  color:#F4CE14; 
+  font-weight:bold
+}
+.bolderTxt{
+  font-weight:bold;
+}
+.titleSection{
+  margin-left: 3em;
+  padding-top: 3rem;
+}
+
+
+/*
+SECTIONS
+*/
+
+/* 
+Section Call to Action1
+*/
+.callactionCard{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #495E57;
+  padding:1rem 3rem;
+  margin-bottom: 2rem;
+}
+.textActionCard{
+  width:70%;
+  text-align:left;  
+}
+.title{
+  font-size:4rem;
+  margin-top: 5rem;
+}
+.subtitle{
+  font-size:2rem;
+}
+.imageActionCard{
+  width:50%;
+  text-align:right;  
+}
+.imageAction{
+  width:80%;
+}
+.deplaceImage{
+  position:relative;
+  top:70px;
+}
+.textaction{
+  margin-bottom: 2em;
+}
+.heroButton {
+margin: 1em 0;
+padding:1em .5em;
+color:#F4CE14;;
+background-color: black;
+border-radius: 20px;
+text-decoration: none;
+font-weight:bolder;
+}
+.heroButton:hover{
+   color:white;
+   background-color: #F4CE14;  
+  }
+
+h2 .buttonLink a{ 
+  float:right; 
+  margin-right: 3rem;
+  text-align: right;
+  background-color: #F4CE14;
+  color:black;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: medium;
+  padding: 1em .5em;
+}
+h2 .buttonLink a:hover {  
+  color: #F4CE14;
+  background-color: black;
+}
+
+
+
+/* 
+Section Specials 
+*/
+.specials{
+  display: flex ;
+  grid-area: specials; 
+  margin: 0 5rem;
+  padding-bottom: 3rem;
+}
+.card{ 
+  margin-top:3rem;
+  flex-direction: row ;
+  justify-content:space-between;
+  gap:2rem;
+}
+.imageCard{ width:50%}
+.price{ color:#F4CE14; font-weight:bold}
+
+
+
+/* 
+Section Testinomials  CustomersSays
+*/
+.testinomial{ 
+  display: flex;
+  grid-area: testinomial;
+  margin: 0 5rem;
+  padding-bottom: 3rem;
+}
+.cardRating{
+  margin-top: 2rem;
+  margin-right: 1rem;
+  flex-direction: row ;
+  justify-content:space-between;
+  gap:2rem;
+}
+.imagecardRating{width:70px}
+
+
+/* 
+Section Resto  Chicago
+*/
+
+.resto{ display: grid; 
+  grid-template-columns: 1fr 1fr;
+  background-color: #F4CE14;
+ 
+  padding: 5rem;
+}
+.restoCard{ 
+  flex-direction: row ;
+  justify-content:space-between;
+}
+.imagerestoCard{width:40%;}
+img.blocNew{
+  position:relative;
+  top:80px;
+  right:90px;
+}
+
+
+/* 
+Section Reservation 
+*/
+.reservation{ display: grid; 
+  grid-template-columns: 1fr 1fr;
+}
+.ReservationCard{
+  padding: 5rem;
+}
+.booKHome{
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 2rem 5rem;
+  font-size: 2rem;
+}
+
+
+/* 
+Section Footer 
+*/
+.footer{
+  display: grid;
+  grid-area: footer;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap:2em;
+  background-color: black;
+  color:white;
+  padding:1rem;
+}
+.footerCard{
+  flex-direction: row ;  
+}
+.footer-menu{
+  display: inline-block;
+}
+.footer-nav-item{
+  display: block;
+  margin:.5em 0;  
+  margin-bottom:.5em;
+  color:#F4CE14;
+  text-decoration: none;
+}
+.footer-nav-item:hover{
+  text-decoration: underline;
+  color:white;  
+}
+.footer-contact li{
+margin:0.5em 0;
+}
+
+.footer-socials{
+  display: inline-block;
+}
+.socials-item a{
+  display: block;
+  margin:.5em 0; 
+  color:#F4CE14;
+  text-decoration: none;
+}
+.socials-item a:hover{
+  color:white;
+  text-decoration: underline;
+}
+
+
+/*
+PAGES
+*/
+
+
+
+/*
+About Page
+Menu
+
+*/
+.aboutSection{
+  margin: 3em;
+  padding-top: 3rem;
+}
+.titleAbout{
+  font-size: 4rem;
+  margin-bottom: .5em;
+  
+}
+.txtAbout{
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+
+
+/*
+Booking Form Page
+*/
+#formBook, .book{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.book{
+  margin-bottom: 2rem;
+
+}
+.fontSize{
+  font-size: 2rem;
+}
+
+fieldset{
+  margin:2rem;
+  padding:3rem;
+  border:none;
+}
+.Field{
+  margin:2rem 0;
+}
+label{
+  margin:2rem;
+  padding:2rem;
+}
+
+.bookButton{
+  background-color: #F4CE14;
+  color:white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: medium;
+  margin-top: 2rem;
+  padding: 1em .5em;
+}
+.bookButton:hover{
+  background-color: black;
+  color:white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: medium;
+  padding: 1em .5em;
+}
+
+
